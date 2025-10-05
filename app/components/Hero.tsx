@@ -75,7 +75,7 @@ export default function Hero() {
       ></div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center container-spacing max-w-7xl mx-auto py-20">
+      <div className="relative z-10 text-center container-spacing max-w-7xl mx-auto pt-32 pb-20">
         <div className={`transition-all duration-1500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* Greeting Badge */}
          

@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mohammad Abu Arra - Full-Stack Developer",
   description: "Enthusiastic full-stack developer experienced in Flutter, Laravel, and Node.js, focused on building scalable, mobile-first solutions.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

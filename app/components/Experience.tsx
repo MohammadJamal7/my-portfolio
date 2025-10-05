@@ -15,88 +15,83 @@ import {
   Star
 } from 'lucide-react';
 
-const workExperience = [
-  {
-    id: 1,
-    title: 'Freelance Web & Mobile Developer',
-    company: 'Remote',
-    location: 'Remote',
-    period: 'March 2025 – Present',
-    description: 'Delivered multiple cross-platform apps with Flutter, backed by Laravel, Firebase, and Node.js/Express.',
-    achievements: [
-      'Worked with relational and NoSQL databases (MySQL, PostgreSQL, SQL Server, SQLite, MongoDB, Firestore)',
-      'Built secure authentication, real-time data sync, and responsive UIs',
-      'Integrated major payment gateways (Moyasar, PayTabs, Paymob, Mada) and AdMob for monetization',
-      'Designed and developed a comprehensive car delivery app in Saudi Arabia',
-      'Developed a full education platform using Mux with DRM-protected video streaming',
-      'Contributed to a large-scale Saudi web platform with Express.js',
-      'Enhanced a Laravel-based e-commerce platform with dynamic shipping (Aramex API)',
-      'Published multiple apps on Play Store and App Store'
-    ],
-    technologies: ['Flutter', 'Laravel', 'Node.js', 'Firebase', 'Payment Gateways', 'Google Maps API', 'Mux DRM', 'Aramex API'],
-    type: 'Freelance'
-  },
-  {
-    id: 2,
-    title: 'Full Stack .NET Intern',
-    company: 'Orange Coding School',
-    location: 'Irbid, Jordan',
-    period: 'August 2024 – November 2024',
-    description: 'Built responsive front-end interfaces and back-end logic using HTML, CSS, JavaScript, C#, and .NET Core.',
-    achievements: [
-      'Collaborated on UI/UX design using Miro and Figma',
-      'Gained practical experience in SQL, MVC design patterns, and ASP.NET Identity',
-      'Worked on full-stack development projects',
-      'Learned enterprise-level development practices'
-    ],
-    technologies: ['C#', '.NET Core', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MVC', 'ASP.NET Identity', 'Figma', 'Miro'],
-    type: 'Internship'
-  }
-];
+// Type definitions for translation data
+interface WorkExperienceData {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  achievements: string[];
+  technologies: string;
+  keyAchievements: string;
+}
 
-const education = [
-  {
-    id: 1,
-    degree: "Bachelor's degree in Software Engineering",
-    institution: 'Zarqa University',
-    location: 'Zarqa, Jordan',
-    period: 'March 2022 – February 2025',
-    gpa: '89% | Excellent',
-    achievements: [
-      'Academic Excellence: 2nd in college twice',
-      'Strong foundation in software engineering principles',
-      'Practical experience with modern development technologies'
-    ]
-  }
-];
+interface EducationData {
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+  gpa: string;
+  achievements: string[];
+}
 
-const certifications = [
-  {
-    id: 1,
-    title: 'Flutter Development: Apps with Firebase & AdMob',
-    issuer: 'Professional Certification',
-    period: 'Recent',
-    description: 'Comprehensive Flutter development with Firebase integration and AdMob monetization'
-  },
-  {
-    id: 2,
-    title: 'Full Stack (Laravel, .NET): Orange Coding School',
-    issuer: 'Orange Coding School',
-    period: '2024',
-    description: 'Full-stack development certification covering Laravel and .NET technologies'
-  },
-  {
-    id: 3,
-    title: 'Professional Emails',
-    issuer: 'Coursera',
-    period: 'Recent',
-    description: 'Professional communication and email writing skills'
-  }
-];
+interface CertificationData {
+  id?: number;
+  title: string;
+  issuer: string;
+  period: string;
+  description: string;
+}
+
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false);
-  const { t } = useTranslation();
+  const { t, tObject } = useTranslation();
+
+  // Get data from translations
+  const freelanceData = tObject('experience.freelance') as WorkExperienceData;
+  const internshipData = tObject('experience.internship') as WorkExperienceData;
+  
+  const workExperience = [
+    {
+      id: 1,
+      title: freelanceData.title,
+      company: freelanceData.company,
+      location: freelanceData.company,
+      period: freelanceData.period,
+      description: freelanceData.description,
+      achievements: freelanceData.achievements,
+      technologies: ['Flutter', 'Laravel', 'Node.js', 'Firebase', 'Payment Gateways', 'Google Maps API', 'Mux DRM', 'Aramex API'],
+      type: 'Freelance'
+    },
+    {
+      id: 2,
+      title: internshipData.title,
+      company: internshipData.company,
+      location: internshipData.location,
+      period: internshipData.period,
+      description: internshipData.description,
+      achievements: internshipData.achievements,
+      technologies: ['C#', '.NET Core', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MVC', 'ASP.NET Identity', 'Figma', 'Miro'],
+      type: 'Internship'
+    }
+  ];
+
+  const educationData = tObject('experience.education') as EducationData;
+  const education = [
+    {
+      id: 1,
+      degree: educationData.degree,
+      institution: educationData.institution,
+      location: educationData.location,
+      period: educationData.period,
+      gpa: educationData.gpa,
+      achievements: educationData.achievements
+    }
+  ];
+
+  const certifications = tObject('experience.certifications') as CertificationData[];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -198,7 +193,7 @@ export default function Experience() {
                         <span>{t('experience.freelance.keyAchievements')}</span>
                       </h4>
                       <ul className="space-y-3">
-                        {job.achievements.map((achievement, idx) => (
+                        {Array.isArray(job.achievements) && job.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-3">
                             <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
                             <span className="text-gray-300">{achievement}</span>
@@ -234,7 +229,7 @@ export default function Experience() {
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4 flex items-center justify-center space-x-3">
                   <GraduationCap className="w-8 h-8 text-blue-400" />
-                  <span>{t('experience.education')}</span>
+                  <span>{t('experience.educationTitle')}</span>
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
               </div>
@@ -262,7 +257,7 @@ export default function Experience() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {education[0].achievements.map((achievement, idx) => (
+                    {Array.isArray(education[0].achievements) && education[0].achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
                         <Star className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
                         <span className="text-gray-300">{achievement}</span>
@@ -278,15 +273,15 @@ export default function Experience() {
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4 flex items-center justify-center space-x-3">
                   <Award className="w-8 h-8 text-yellow-400" />
-                  <span>{t('experience.certifications')}</span>
+                  <span>{t('experience.certificationsTitle')}</span>
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full"></div>
               </div>
 
               <div className="space-y-6">
-                {certifications.map((cert, index) => (
+                {certifications && Array.isArray(certifications) && certifications.length > 0 && certifications.map((cert: CertificationData, index: number) => (
                   <Card 
-                    key={cert.id} 
+                    key={cert.id || index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border-white/10 hover:border-yellow-400/50 transition-all duration-500 hover:transform hover:scale-105 backdrop-blur-sm"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >

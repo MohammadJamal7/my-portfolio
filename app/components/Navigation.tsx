@@ -3,7 +3,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/lib/hooks/useTranslation';
-import { useLanguage } from '@/lib/contexts/LanguageContext';
 // import { Badge } from '@/components/ui/badge';
 import { 
   Menu, 
@@ -13,16 +12,14 @@ import {
   Code, 
   Briefcase, 
   Mail,
-  Sparkles,
-  Languages
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const { t } = useTranslation();
-  const { language, toggleLanguage } = useLanguage();
 
   const navItems = useMemo(() => [
     { id: 'home', label: t('nav.home'), icon: Home },
@@ -30,7 +27,6 @@ export default function Navigation() {
     { id: 'skills', label: t('nav.skills'), icon: Code },
     { id: 'experience', label: t('nav.experience'), icon: Briefcase },
     { id: 'projects', label: t('nav.projects'), icon: Briefcase },
-    { id: 'contact', label: t('nav.contact'), icon: Mail },
   ], [t]);
 
   useEffect(() => {
@@ -74,13 +70,17 @@ export default function Navigation() {
         ? 'bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-white/10' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto container-spacing">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-8">
           {/* Logo */}
           <div className="flex items-center space-x-6 group cursor-pointer px-4 py-2" onClick={() => scrollToSection('home')}>
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
+            <Image 
+              src="/favicon.svg" 
+              alt="Logo" 
+              width={48} 
+              height={48} 
+              className="w-12 h-12 rounded-lg group-hover:scale-110 transition-transform duration-300" 
+            />
             <div className="text-xl font-bold text-white">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 {t('hero.name')}
@@ -89,13 +89,13 @@ export default function Navigation() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
             {navItems.map((item) => (
               <Button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 variant="ghost"
-                className={`relative !px-12 !py-5 font-medium transition-all duration-300 group rounded-lg ${
+                className={`relative !px-6 xl:!px-12 !py-5 font-medium transition-all duration-300 group rounded-lg ${
                   activeSection === item.id
                     ? 'text-white bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 shadow-lg shadow-purple-500/10'
                     : 'text-gray-300 hover:text-white hover:bg-white/5 hover:scale-105'
@@ -116,20 +116,11 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Language Toggle & CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4 ml-8">
-            <Button
-              onClick={toggleLanguage}
-              variant="ghost"
-              className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300"
-            >
-              <Languages className="w-5 h-5 mr-2" />
-              <span className="text-sm font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
-            </Button>
-            
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4 ml-4">
             <Button
               onClick={() => scrollToSection('contact')}
-              className="group relative px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+              className="group relative px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 whitespace-nowrap"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <span className="text-sm font-medium">{t('nav.letsTalk')}</span>
@@ -176,16 +167,7 @@ export default function Navigation() {
               </Button>
             ))}
             
-            <div className="pt-8 border-t border-white/10 space-y-4">
-              <Button
-                onClick={toggleLanguage}
-                variant="ghost"
-                className="w-full text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-all duration-300"
-              >
-                <Languages className="w-5 h-5 mr-3" />
-                <span className="text-base font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
-              </Button>
-              
+            <div className="pt-8 border-t border-white/10">
               <Button
                 onClick={() => scrollToSection('contact')}
                 className="w-full px-8 py-5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"

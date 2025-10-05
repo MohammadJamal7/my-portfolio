@@ -65,8 +65,8 @@
     "title": "My Journey",
     "subtitle": "Experience & Education",
     "workExperience": "Work Experience",
-    "education": "Education",
-    "certifications": "Certifications",
+    "educationTitle": "Education",
+    "certificationsTitle": "Certifications",
     "freelance": {
       "title": "Freelance Web & Mobile Developer",
       "company": "Remote",
@@ -118,16 +118,10 @@
         "description": "Comprehensive Flutter development with Firebase integration and AdMob monetization"
       },
       {
-        "title": "Full Stack (Laravel, .NET): Orange Coding School",
+        "title": "Full Stack .NET: Orange Coding School",
         "issuer": "Orange Coding School",
         "period": "2024",
-        "description": "Full-stack development certification covering Laravel and .NET technologies"
-      },
-      {
-        "title": "Professional Emails",
-        "issuer": "Coursera",
-        "period": "Recent",
-        "description": "Professional communication and email writing skills"
+        "description": "Full-stack development certification covering .NET technologies and enterprise development"
       }
     ]
   },
@@ -148,36 +142,53 @@
     "viewCode": "View Code",
     "technologiesUsed": "Technologies Used",
     "viewLiveDemo": "View Live Demo",
+    "playStore": "Play Store",
+    "appStore": "App Store",
+    "visitWebsite": "Visit Website",
+    "selectedProjects": "Selected Projects",
     "projects": [
       {
-        "title": "Car Delivery App (Saudi Arabia)",
-        "description": "Comprehensive car delivery app with mobile and backend features, Google Maps API integration, and Firebase workflows. Features include real-time tracking, payment integration, and admin dashboard.",
-        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "Payment Gateways"]
+        "title": "Wdni - Taxi Booking App",
+        "description": "Smart transportation and delivery app that allows users to set trip prices and receive offers from nearby drivers. Features real-time tracking, driver negotiation, rating system, and seamless user experience. Available on Google Play and App Store.",
+        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "Payment Gateways", "Real-time Chat"],
+        "category": "Mobile",
+        "image": "/wdni-rider.png",
+        "links": {
+          "playStore": "https://play.google.com/store/apps/details?id=com.wdni.customers",
+          "appStore": "https://apps.apple.com/us/app/%D9%88%D8%AF%D9%86%D9%8A-%D9%85%D8%B4%D8%A7%D9%88%D9%8A%D8%B1-%D8%AA%D9%88%D8%B5%D9%8A%D9%84-%D9%88%D8%A3%D9%83%D8%AB%D8%B1/id6747665421"
+        }
+      },
+      {
+        "title": "Captain Wdni - Driver App",
+        "description": "Professional driver app for the Wdni platform, enabling drivers to provide transportation and delivery services with high efficiency. Features real-time order management, customer location tracking, navigation, daily income reports, and rating system for service quality enhancement.",
+        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "Real-time Tracking", "Income Analytics"],
+        "category": "Mobile",
+        "image": "/wdni-driver.png",
+        "links": {
+          "playStore": "https://play.google.com/store/apps/details?id=com.wdni.drivers",
+          "appStore": "https://apps.apple.com/us/app/%D9%83%D8%A7%D8%A8%D8%AA%D9%86-%D9%88%D8%AF%D9%86%D9%8A-%D8%B3%D9%88%D9%82-%D9%88%D8%A3%D9%83%D8%B3%D8%A8-%D9%85%D8%B9-%D9%88%D8%AF%D9%86%D9%8A/id6747668310"
+        }
       },
       {
         "title": "Education Platform with DRM Video",
         "description": "Full education platform using Mux with DRM-protected video streaming for secure content delivery. Features include user authentication, course management, and secure video streaming.",
-        "technologies": ["Flutter", "Node.js", "Mux DRM", "Firebase", "MongoDB"]
+        "technologies": ["Flutter", "Node.js", "Mux DRM", "Firebase", "MongoDB"],
+        "category": "Web",
+        "links": {
+          "playStore": null,
+          "appStore": null,
+          "website": null
+        }
       },
       {
-        "title": "Saudi Web Platform",
+        "title": "Linktech - Saudi Web Platform",
         "description": "Large-scale Saudi web platform with Express.js, integrating SADQ authentication and Moyasar payments. Features include user management, payment processing, and real-time data sync.",
-        "technologies": ["Express.js", "Node.js", "SADQ Auth", "Moyasar", "PostgreSQL"]
-      },
-      {
-        "title": "E-commerce Platform",
-        "description": "Laravel-based e-commerce platform with dynamic shipping (Aramex API) and seamless checkout (PayTabs). Features include inventory management, order tracking, and payment processing.",
-        "technologies": ["Laravel", "PHP", "Aramex API", "PayTabs", "MySQL"]
-      },
-      {
-        "title": "Cross-Platform Mobile Apps",
-        "description": "Multiple published apps on Play Store and App Store with Flutter, featuring AdMob integration, Firebase backend, and responsive UI/UX design.",
-        "technologies": ["Flutter", "Dart", "AdMob SDK", "Firebase", "Google Play"]
-      },
-      {
-        "title": ".NET Core Full Stack",
-        "description": "Full-stack .NET Core application with responsive front-end interfaces and back-end logic, featuring MVC design patterns and ASP.NET Identity authentication.",
-        "technologies": [".NET Core", "C#", "ASP.NET Identity", "SQL Server", "HTML/CSS/JS"]
+        "technologies": ["Express.js", "Node.js", "SADQ Auth", "Moyasar", "PostgreSQL"],
+        "category": "Frontend",
+        "image": "/linktech.png",
+        "links": {
+          "website": "https://linktech.app"
+        }
       }
     ]
   },
@@ -230,7 +241,7 @@
     },
     "getInTouch": "Get In Touch",
     "followMe": "Follow Me",
-    "copyright": "© 2024 Mohammad Abu Arra. Made with",
+    "copyright": "© 2025 Mohammad Abu Arra. Made with",
     "madeWith": "and modern web technologies.",
     "backToTop": "Back to Top"
   }

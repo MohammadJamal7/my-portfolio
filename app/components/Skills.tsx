@@ -16,7 +16,7 @@ const skills = [
       { name: 'PHP', level: 90, color: 'from-purple-400 to-purple-600', icon: '🐘' },
       { name: 'JavaScript', level: 88, color: 'from-yellow-400 to-yellow-600', icon: '🟨' },
       { name: 'C#', level: 85, color: 'from-blue-500 to-blue-700', icon: '🔷' },
-      { name: 'Flutter', level: 95, color: 'from-cyan-400 to-cyan-600', icon: '🎯' },
+      { name: 'Flutter', level: 95, color: 'from-cyan-400 to-cyan-600', icon: '🦋' },
       { name: 'Laravel', level: 90, color: 'from-red-400 to-red-600', icon: '🔴' },
       { name: 'Node.js/Express', level: 88, color: 'from-green-400 to-green-600', icon: '🚀' },
       { name: '.NET Core', level: 85, color: 'from-purple-400 to-purple-600', icon: '🔷' }
@@ -64,7 +64,7 @@ const skills = [
 ];
 
 const additionalSkills = [
-  { name: 'Microsoft Office', icon: '📊', color: 'from-blue-400 to-blue-600' },
+  { name: 'Mobile Apps', icon: '📱', color: 'from-blue-400 to-blue-600' },
   { name: 'Moyasar', icon: '💳', color: 'from-green-400 to-teal-500' },
   { name: 'PayTabs', icon: '💳', color: 'from-blue-400 to-purple-500' },
   { name: 'Paymob', icon: '💳', color: 'from-green-400 to-green-600' },
@@ -81,7 +81,7 @@ const additionalSkills = [
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: number }>({});
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -120,10 +120,13 @@ export default function Skills() {
     t('skills.categories.auth'), 
     t('skills.categories.tools')
   ];
+
+  // Set initial category to "All" if not set
+  const currentCategory = selectedCategory || t('skills.categories.all');
   
-  const filteredSkills = selectedCategory === t('skills.categories.all')
+  const filteredSkills = currentCategory === t('skills.categories.all')
     ? skills 
-    : skills.filter(skill => skill.category === selectedCategory);
+    : skills.filter(skill => skill.category === currentCategory);
 
   return (
     <section id="skills" className="section-spacing bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
@@ -158,7 +161,7 @@ export default function Skills() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-500 transform hover:scale-105 ${
-                  selectedCategory === category
+                  currentCategory === category
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/25'
                     : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white border border-white/10 hover:border-purple-400/50 backdrop-blur-sm'
                 }`}

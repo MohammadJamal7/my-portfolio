@@ -9,93 +9,93 @@
     "letsTalk": "لنتحدث"
   },
   "hero": {
-    "greeting": "مرحباً، أنا محمد",
-    "name": "محمد أبو عرة",
-    "title": "مطور Full-Stack",
-    "subtitle": "مطور متحمس ذو خبرة في Flutter، Laravel، Node.js، و .NET Core",
-    "subtitle2": "أبني حلول قابلة للتوسع تركز على الهاتف المحمول مع تكامل بوابات الدفع",
-    "viewWork": "شاهد أعمالي",
+    "greeting": "أهلاً وسهلاً، أنا مُحَمَّد",
+    "name": "مُحَمَّد أبو عره",
+    "title": "Full-Stack Developer",
+    "subtitle": "مطور متخصص في Flutter، Laravel، Node.js، و .NET Core",
+    "subtitle2": "أطور حلول تقنية متقدمة تركز على التطبيقات المحمولة مع دمج أنظمة الدفع",
+    "viewWork": "تصفح أعمالي",
     "getInTouch": "تواصل معي",
-    "scrollToExplore": "مرر للاستكشاف"
+    "scrollToExplore": "انتقل للاستكشاف"
   },
   "about": {
-    "title": "نبذة عني",
-    "subtitle": "صناعة التميز الرقمي",
-    "description1": "أنا محمد أبو عرة، مطور Full-Stack متحمس ذو خبرة في Flutter، Laravel، و Node.js، أركز على بناء حلول قابلة للتوسع تركز على الهاتف المحمول. أنا ماهر في تكامل بوابات الدفع وواجهات برمجة التطبيقات لتقديم تجارب مستخدم سلسة.",
-    "description2": "رحلتي تمتد عبر تطوير الهاتف المحمول مع Flutter، خدمات الخادم باستخدام Laravel و Express.js، وحلول المؤسسات مع .NET Core. أؤمن بالكود النظيف وأفضل الممارسات والتعلم المستمر.",
-    "description3": "كمستقل، قدمت تطبيقات متعددة المنصات مع Flutter، مدعومة بـ Laravel، Firebase، و Node.js/Express. عملت مع قواعد البيانات العلائقية وغير العلائقية ودمجت بوابات الدفع الرئيسية بما في ذلك Moyasar، PayTabs، Paymob، و Mada.",
+    "title": "من أنا",
+    "subtitle": "إبداع في عالم التقنية",
+    "description1": "أنا مُحَمَّد أبو عرة، مطور تطبيقات ويب ومحمولة متخصص في Flutter، Laravel، و Node.js. أهتم بتطوير حلول تقنية متقدمة تركز على التطبيقات المحمولة. لدي خبرة واسعة في دمج أنظمة الدفع وواجهات برمجة التطبيقات لتقديم تجارب مستخدم متميزة.",
+    "description2": "خبرتي تشمل تطوير التطبيقات المحمولة باستخدام Flutter، وخدمات الخادم عبر Laravel و Express.js، بالإضافة إلى حلول المؤسسات باستخدام .NET Core. ألتزم بأعلى معايير الجودة في البرمجة وأفضل الممارسات التقنية.",
+    "description3": "كخبير مستقل، قمت بتطوير العديد من التطبيقات متعددة المنصات باستخدام Flutter، مع دعم Laravel، Firebase، و Node.js/Express. لدي خبرة واسعة في قواعد البيانات المختلفة ودمج أنظمة الدفع المتقدمة مثل Moyasar، PayTabs، Paymob، و Mada.",
     "stats": {
-      "projects": "المشاريع المكتملة",
-      "experience": "سنوات الخبرة",
+      "projects": "مشاريع مكتملة",
+      "experience": "سنوات خبرة",
       "satisfaction": "رضا العملاء",
-      "support": "الدعم المتاح"
+      "support": "دعم متاح"
     },
     "status": "متاح للعمل",
-    "philosophy": "فلسفة العمل",
-    "philosophyText": "أؤمن بتقديم كود نظيف وقابل للصيانة لا يلبي المتطلبات فحسب، بل يتجاوز التوقعات. كل مشروع هو فرصة للتعلم والنمو.",
+    "philosophy": "رؤيتي المهنية",
+    "philosophyText": "أؤمن بتقديم حلول تقنية عالية الجودة وقابلة للتطوير، لا تفي بالمتطلبات فحسب بل تتجاوز التوقعات. كل مشروع يمثل فرصة للتعلم والتطوير المستمر.",
     "values": {
-      "title": "القيم الأساسية",
+      "title": "قيمي الأساسية",
       "quality": "الجودة أولاً",
       "satisfaction": "رضا العملاء",
-      "learning": "التعلم المستمر"
+      "learning": "التطوير المستمر"
     },
     "availability": "التوفر",
-    "availabilityText": "مستعد لاستلام مشاريع جديدة ومساعدتك في تحويل أفكارك إلى واقع."
+    "availabilityText": "أستقبل المشاريع الجديدة وأساعدك في تحويل أفكارك إلى تطبيقات تقنية متقدمة."
   },
   "skills": {
-    "title": "خبرتي",
-    "subtitle": "المهارات التقنية",
-    "description": "نظرة شاملة على خبرتي التقنية عبر مجالات متعددة، من تطوير الهاتف المحمول إلى البنية التحتية السحابية",
+    "title": "مهاراتي",
+    "subtitle": "التقنيات التي أتقنها",
+    "description": "مجموعة شاملة من المهارات التقنية المتقدمة في مختلف المجالات، من تطوير التطبيقات المحمولة إلى البنية التحتية السحابية",
     "categories": {
       "all": "الكل",
-      "languages": "اللغات والأطر",
+      "languages": "لغات البرمجة والأطر",
       "databases": "قواعد البيانات وواجهات برمجة التطبيقات",
-      "auth": "المصادقة والخدمات",
+      "auth": "أنظمة المصادقة والخدمات",
       "tools": "الأدوات والخدمات"
     },
-    "additional": "خبرة إضافية",
-    "additionalDesc": "الأدوات والتقنيات التي أعمل بها",
+    "additional": "مهارات إضافية",
+    "additionalDesc": "التقنيات والأدوات التي أستخدمها في عملي",
     "summary": {
       "technologies": "التقنيات",
-      "categories": "الفئات",
+      "categories": "التصنيفات",
       "experience": "سنوات الخبرة"
     }
   },
   "experience": {
-    "title": "رحلتي",
-    "subtitle": "الخبرة والتعليم",
+    "title": "خبرتي المهنية",
+    "subtitle": "الخبرة العملية والتعليم",
     "workExperience": "الخبرة العملية",
-    "education": "التعليم",
-    "certifications": "الشهادات",
+    "educationTitle": "التعليم",
+    "certificationsTitle": "الشهادات",
     "freelance": {
-      "title": "مطور ويب وهاتف محمول مستقل",
-      "company": "عن بُعد",
+      "title": "مطور تطبيقات ويب ومحمولة مستقل",
+      "company": "عمل حر",
       "period": "مارس 2025 – حتى الآن",
-      "description": "قدمت تطبيقات متعددة المنصات مع Flutter، مدعومة بـ Laravel، Firebase، و Node.js/Express.",
+      "description": "أطور تطبيقات متعددة المنصات باستخدام Flutter، مع دعم Laravel، Firebase، و Node.js/Express.",
       "achievements": [
-        "عملت مع قواعد البيانات العلائقية وغير العلائقية (MySQL، PostgreSQL، SQL Server، SQLite، MongoDB، Firestore)",
-        "بنيت مصادقة آمنة ومزامنة البيانات في الوقت الفعلي وواجهات مستخدم متجاوبة",
-        "دمجت بوابات الدفع الرئيسية (Moyasar، PayTabs، Paymob، Mada) و AdMob للربح",
-        "صممت وطورت تطبيق توصيل سيارات شامل في المملكة العربية السعودية",
-        "طورت منصة تعليمية كاملة باستخدام Mux مع بث فيديو محمي بـ DRM",
-        "ساهمت في منصة ويب سعودية واسعة النطاق مع Express.js",
-        "حسنت منصة تجارة إلكترونية مبنية على Laravel مع شحن ديناميكي (Aramex API)",
-        "نشرت تطبيقات متعددة على Play Store و App Store"
+        "خبرة واسعة في قواعد البيانات المختلفة (MySQL، PostgreSQL، SQL Server، SQLite، MongoDB، Firestore)",
+        "تطوير أنظمة مصادقة آمنة ومزامنة البيانات الفورية وواجهات مستخدم متجاوبة",
+        "دمج أنظمة الدفع المتقدمة (Moyasar، PayTabs، Paymob، Mada) و AdMob للربح",
+        "تطوير تطبيق توصيل سيارات متكامل في المملكة العربية السعودية",
+        "إنشاء منصة تعليمية شاملة باستخدام Mux مع حماية الفيديو بـ DRM",
+        "المساهمة في تطوير منصة ويب سعودية واسعة النطاق باستخدام Express.js",
+        "تطوير منصة تجارة إلكترونية متقدمة باستخدام Laravel مع نظام شحن ديناميكي (Aramex API)",
+        "نشر تطبيقات متعددة على متاجر التطبيقات"
       ],
       "technologies": "التقنيات المستخدمة",
-      "keyAchievements": "الإنجازات الرئيسية"
+      "keyAchievements": "أهم الإنجازات"
     },
     "internship": {
-      "title": "متدرب Full Stack .NET",
+      "title": "متدرب تطوير Full Stack .NET",
       "company": "مدرسة Orange للبرمجة",
       "location": "إربد، الأردن",
       "period": "أغسطس 2024 – نوفمبر 2024",
-      "description": "بنيت واجهات أمامية متجاوبة ومنطق خادم باستخدام HTML، CSS، JavaScript، C#، و .NET Core.",
+      "description": "تطوير واجهات أمامية متجاوبة ومنطق خادم باستخدام HTML، CSS، JavaScript، C#، و .NET Core.",
       "achievements": [
-        "تعاونت في تصميم UI/UX باستخدام Miro و Figma",
-        "اكتسبت خبرة عملية في SQL، أنماط MVC، و ASP.NET Identity",
-        "عملت على مشاريع تطوير Full-Stack",
-        "تعلمت ممارسات التطوير على مستوى المؤسسات"
+        "التعاون في تصميم واجهات المستخدم باستخدام Miro و Figma",
+        "اكتساب خبرة عملية في SQL، أنماط MVC، و ASP.NET Identity",
+        "العمل على مشاريع تطوير شاملة",
+        "تعلم أفضل الممارسات في التطوير على مستوى المؤسسات"
       ]
     },
     "education": {
@@ -105,9 +105,9 @@
       "period": "مارس 2022 – فبراير 2025",
       "gpa": "المعدل: 89% | ممتاز",
       "achievements": [
-        "التميز الأكاديمي: الثاني في الكلية مرتين",
+        "التميز الأكاديمي: حصلت على المركز الثاني في الكلية مرتين",
         "أساس قوي في مبادئ هندسة البرمجيات",
-        "خبرة عملية مع تقنيات التطوير الحديثة"
+        "خبرة عملية مع أحدث تقنيات التطوير"
       ]
     },
     "certifications": [
@@ -115,78 +115,89 @@
         "title": "تطوير Flutter: تطبيقات مع Firebase و AdMob",
         "issuer": "شهادة مهنية",
         "period": "حديث",
-        "description": "تطوير Flutter شامل مع تكامل Firebase وربح AdMob"
+        "description": "تطوير شامل لتطبيقات Flutter مع تكامل Firebase وأنظمة الربح AdMob"
       },
       {
-        "title": "Full Stack (Laravel، .NET): مدرسة Orange للبرمجة",
+        "title": "تطوير Full Stack .NET: مدرسة Orange للبرمجة",
         "issuer": "مدرسة Orange للبرمجة",
         "period": "2024",
-        "description": "شهادة تطوير Full-Stack تغطي تقنيات Laravel و .NET"
-      },
-      {
-        "title": "البريد الإلكتروني المهني",
-        "issuer": "Coursera",
-        "period": "حديث",
-        "description": "مهارات التواصل المهني وكتابة البريد الإلكتروني"
+        "description": "شهادة متخصصة في التطوير الشامل تغطي تقنيات .NET والتطوير على مستوى المؤسسات"
       }
     ]
   },
   "projects": {
     "title": "مشاريعي",
-    "subtitle": "المحفظة",
-    "description": "عرض لأعمالي الحديثة عبر تقنيات ومنصات مختلفة، تتميز بحلول واقعية وتصاميم مبتكرة",
+    "subtitle": "معرض الأعمال",
+    "description": "مجموعة من مشاريعي الحديثة عبر تقنيات ومنصات متنوعة، تتميز بحلول عملية وتصاميم إبداعية",
     "categories": {
       "all": "الكل",
-      "mobile": "الهاتف المحمول",
-      "web": "الويب",
-      "backend": "الخادم",
-      "frontend": "الواجهة الأمامية"
+      "mobile": "Mobile",
+      "web": "Web",
+      "backend": "Backend",
+      "frontend": "Frontend"
     },
     "featured": "مميز",
     "viewDetails": "عرض التفاصيل",
     "viewProject": "عرض المشروع",
     "viewCode": "عرض الكود",
     "technologiesUsed": "التقنيات المستخدمة",
-    "viewLiveDemo": "عرض تجريبي مباشر",
+    "viewLiveDemo": "عرض مباشر",
+    "playStore": "Play Store",
+    "appStore": " Apple Store",
+    "visitWebsite": "زيارة الموقع",
+    "selectedProjects": "المشاريع المختارة",
     "projects": [
       {
-        "title": "تطبيق توصيل السيارات (المملكة العربية السعودية)",
-        "description": "تطبيق توصيل سيارات شامل مع ميزات الهاتف المحمول والخادم، تكامل Google Maps API، وسير عمل Firebase. يشمل التتبع في الوقت الفعلي وتكامل الدفع ولوحة تحكم إدارية.",
-        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "بوابات الدفع"]
+        "title": "ودني - تطبيق حجز التاكسي",
+        "description": "تطبيق ذكي للنقل والتوصيل يتيح للمستخدمين تحديد أسعار الرحلات واستلام عروض من السائقين القريبين. يتضمن التتبع المباشر ونظام التفاوض مع السائقين ونظام التقييم وتجربة مستخدم سلسة. متاح على Google Play و App Store.",
+        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "أنظمة الدفع", "الدردشة المباشرة"],
+        "category": "Mobile",
+        "image": "/wdni-rider.png",
+        "links": {
+          "playStore": "https://play.google.com/store/apps/details?id=com.wdni.customers",
+          "appStore": "https://apps.apple.com/us/app/%D9%88%D8%AF%D9%86%D9%8A-%D9%85%D8%B4%D8%A7%D9%88%D9%8A%D8%B1-%D8%AA%D9%88%D8%B5%D9%8A%D9%84-%D9%88%D8%A3%D9%83%D8%AB%D8%B1/id6747665421"
+        }
       },
       {
-        "title": "منصة تعليمية مع فيديو DRM",
-        "description": "منصة تعليمية كاملة باستخدام Mux مع بث فيديو محمي بـ DRM لتسليم المحتوى الآمن. تشمل مصادقة المستخدم وإدارة الدورات وبث الفيديو الآمن.",
-        "technologies": ["Flutter", "Node.js", "Mux DRM", "Firebase", "MongoDB"]
+        "title": "كابتن ودني - تطبيق السائق",
+        "description": "تطبيق مهني للسائقين في منصة ودني، يتيح لهم تقديم خدمات النقل والتوصيل بكفاءة عالية. يتضمن إدارة الطلبات المباشرة، تتبع موقع العملاء، الملاحة، تقارير الدخل اليومية، ونظام التقييم لتحسين جودة الخدمة.",
+        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "التتبع المباشر", "تحليلات الدخل"],
+        "category": "Mobile",
+        "image": "/wdni-driver.png",
+        "links": {
+          "playStore": "https://play.google.com/store/apps/details?id=com.wdni.drivers",
+          "appStore": "https://apps.apple.com/us/app/%D9%83%D8%A7%D8%A8%D8%AA%D9%86-%D9%88%D8%AF%D9%86%D9%8A-%D8%B3%D9%88%D9%82-%D9%88%D8%A3%D9%83%D8%B3%D8%A8-%D9%85%D8%B9-%D9%88%D8%AF%D9%86%D9%8A/id6747668310"
+        }
       },
       {
-        "title": "منصة ويب سعودية",
-        "description": "منصة ويب سعودية واسعة النطاق مع Express.js، تكامل مصادقة SADQ ومدفوعات Moyasar. تشمل إدارة المستخدمين ومعالجة المدفوعات ومزامنة البيانات في الوقت الفعلي.",
-        "technologies": ["Express.js", "Node.js", "SADQ Auth", "Moyasar", "PostgreSQL"]
+        "title": "منصة تعليمية مع حماية الفيديو",
+        "description": "منصة تعليمية متكاملة باستخدام Mux مع نظام حماية الفيديو DRM لتقديم المحتوى التعليمي الآمن. تشمل أنظمة المصادقة وإدارة الدورات وبث الفيديو المحمي.",
+        "technologies": ["Flutter", "Node.js", "Mux DRM", "Firebase", "MongoDB"],
+        "category": "FullStack",
+        "links": {
+          "playStore": null,
+          "appStore": null,
+          "website": null
+        }
       },
       {
-        "title": "منصة تجارة إلكترونية",
-        "description": "منصة تجارة إلكترونية مبنية على Laravel مع شحن ديناميكي (Aramex API) ودفع سلس (PayTabs). تشمل إدارة المخزون وتتبع الطلبات ومعالجة المدفوعات.",
-        "technologies": ["Laravel", "PHP", "Aramex API", "PayTabs", "MySQL"]
-      },
-      {
-        "title": "تطبيقات الهاتف المحمول متعددة المنصات",
-        "description": "تطبيقات متعددة منشورة على Play Store و App Store مع Flutter، تتميز بتكامل AdMob وخادم Firebase وتصميم UI/UX متجاوب.",
-        "technologies": ["Flutter", "Dart", "AdMob SDK", "Firebase", "Google Play"]
-      },
-      {
-        "title": "Full Stack .NET Core",
-        "description": "تطبيق Full-Stack .NET Core مع واجهات أمامية متجاوبة ومنطق خادم، يتميز بأنماط MVC ومصادقة ASP.NET Identity.",
-        "technologies": [".NET Core", "C#", "ASP.NET Identity", "SQL Server", "HTML/CSS/JS"]
+        "title": "لينكتك - منصة ويب سعودية",
+        "description": "منصة ويب سعودية واسعة النطاق باستخدام Express.js، مع تكامل مصادقة SADQ وأنظمة دفع Moyasar. تشمل إدارة المستخدمين ومعالجة المدفوعات ومزامنة البيانات المباشرة.",
+        "technologies": ["Express.js", "Node.js", "SADQ Auth", "Moyasar", "PostgreSQL"],
+        "category": "FullStack",
+        "image": "/linktech.png",
+        "links": {
+          "website": "https://linktech.app"
+        }
       }
     ]
   },
   "contact": {
     "title": "تواصل معي",
     "subtitle": "التواصل",
-    "description": "مستعد لبدء مشروعك القادم؟ دعنا نناقش كيف يمكنني مساعدتك في تحويل أفكارك إلى واقع.",
+    "description": "هل أنت مستعد لبدء مشروعك القادم؟ دعنا نناقش كيف يمكنني مساعدتك في تحويل أفكارك إلى تطبيقات تقنية متقدمة.",
     "letsConnect": "لنتواصل",
-    "connectDescription": "أنا مهتم دائماً بالفرص الجديدة والمشاريع المثيرة. سواء كان لديك سؤال أو تريد فقط أن تقول مرحباً، سأحاول جهدي للرد عليك!",
+    "connectDescription": "أنا مهتم دائماً بالفرص الجديدة والمشاريع المثيرة. سواء كان لديك سؤال أو تريد فقط أن تقول مرحباً، سأبذل قصارى جهدي للرد عليك!",
     "contactInfo": {
       "email": "البريد الإلكتروني",
       "location": "الموقع",
@@ -217,7 +228,7 @@
     }
   },
   "footer": {
-    "description": "مطور Full-Stack متحمس ذو خبرة في Flutter، Laravel، و Node.js، أركز على بناء حلول قابلة للتوسع تركز على الهاتف المحمول مع تكامل بوابات الدفع.",
+    "description": "مطور تطبيقات ويب ومحمولة متخصص في Flutter، Laravel، و Node.js، أهتم بتطوير حلول تقنية متقدمة تركز على التطبيقات المحمولة مع دمج أنظمة الدفع المتطورة.",
     "availableForWork": "متاح للعمل",
     "quickLinks": {
       "title": "روابط سريعة",
@@ -230,7 +241,7 @@
     },
     "getInTouch": "تواصل معي",
     "followMe": "تابعني",
-    "copyright": "© 2024 محمد أبو عرة. صنع بـ",
+    "copyright": "© 2025 مُحَمَّد أبو عره. تم تطويره بـ",
     "madeWith": "وتقنيات ويب حديثة.",
     "backToTop": "العودة للأعلى"
   }
