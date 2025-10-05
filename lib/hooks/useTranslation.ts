@@ -1,8 +1,6 @@
 import { useLanguage } from '@/lib/contexts/LanguageContext';
-
-// Import translations as modules to avoid Turbopack HMR issues
-const enTranslations = require('@/lib/translations/en.json');
-const arTranslations = require('@/lib/translations/ar.json');
+import enTranslations from '@/lib/translations/en.json';
+import arTranslations from '@/lib/translations/ar.json';
 
 const translations = {
   en: enTranslations,

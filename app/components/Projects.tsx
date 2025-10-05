@@ -3,14 +3,30 @@
 import { useEffect, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTranslation } from '@/lib/hooks/useTranslation';
+import Image from 'next/image';
+
+interface Project {
+  id?: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  category: string;
+  image?: string;
+  featured?: boolean;
+  links?: {
+    playStore?: string | null;
+    appStore?: string | null;
+    website?: string | null;
+  };
+}
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { t, tObject } = useTranslation();
 
   // Get projects from translations
-  const projects = (tObject('projects.projects') as any[]) || [];
+  const projects = (tObject('projects.projects') as Project[]) || [];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,10 +83,11 @@ export default function Projects() {
                 <div className="relative overflow-hidden">
                   {project.image ? (
                     <div className="w-full h-56 relative">
-                      <img 
+                      <Image 
                         src={project.image} 
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                       {project.featured && (
                         <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
@@ -249,10 +266,11 @@ export default function Projects() {
 
               {selectedProject.image ? (
                 <div className="w-full h-48 rounded-lg mb-6 overflow-hidden">
-                  <img 
+                  <Image 
                     src={selectedProject.image} 
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               ) : (

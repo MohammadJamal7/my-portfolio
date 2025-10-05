@@ -10,8 +10,7 @@ import {
   Home, 
   User, 
   Code, 
-  Briefcase, 
-  Mail,
+  Briefcase,
 } from 'lucide-react';
 import Image from 'next/image';
 
