@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 
 const projects = [
   {
@@ -76,10 +77,17 @@ export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const { t } = useTranslation();
 
-  const categories = ['All', 'Mobile', 'Web', 'Backend', 'Frontend'];
+  const categories = [
+    t('projects.categories.all'), 
+    t('projects.categories.mobile'), 
+    t('projects.categories.web'), 
+    t('projects.categories.backend'), 
+    t('projects.categories.frontend')
+  ];
 
-  const filteredProjects = selectedCategory === 'All' 
+  const filteredProjects = selectedCategory === t('projects.categories.all')
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
@@ -107,15 +115,14 @@ export default function Projects() {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
-              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Portfolio</span>
+              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{t('projects.subtitle')}</span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-              My <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Projects</span>
+              {t('projects.title')}
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A showcase of my recent work across different technologies and platforms, 
-              featuring real-world solutions and innovative designs
+              {t('projects.description')}
             </p>
           </div>
 
@@ -167,7 +174,7 @@ export default function Projects() {
                     
                     {project.featured && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                        ⭐ Featured
+                        ⭐ {t('projects.featured')}
                       </div>
                     )}
                     
@@ -178,7 +185,7 @@ export default function Projects() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        <p className="text-sm font-medium">View Details</p>
+                        <p className="text-sm font-medium">{t('projects.viewDetails')}</p>
                       </div>
                     </div>
                   </div>
@@ -229,7 +236,7 @@ export default function Projects() {
 
                   <div className="flex gap-3">
                     <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-8 rounded-xl text-sm font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
-                      View Project
+                      {t('projects.viewProject')}
                     </button>
                     <button className="px-6 py-4 border border-gray-600 text-gray-300 rounded-xl hover:bg-slate-600 hover:text-white transition-all duration-300 transform hover:scale-105">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -275,7 +282,7 @@ export default function Projects() {
               <p className="text-gray-300 mb-6">{selectedProject.description}</p>
 
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Technologies Used</h4>
+                <h4 className="text-lg font-semibold text-white mb-3">{t('projects.technologiesUsed')}</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.technologies.map((tech) => (
                     <span
@@ -290,10 +297,10 @@ export default function Projects() {
 
               <div className="flex gap-4">
                 <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-8 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
-                  View Live Demo
+                  {t('projects.viewLiveDemo')}
                 </button>
                 <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:bg-slate-600 transition-colors duration-300">
-                  View Code
+                  {t('projects.viewCode')}
                 </button>
               </div>
             </div>

@@ -3,11 +3,13 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 import { ArrowRight, Mail } from 'lucide-react';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -80,21 +82,17 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
-            <span className="block mb-2">Hi, I'm Mohammad</span>
+            <span className="block mb-2">{t('hero.greeting')}</span>
             <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
-              Full-Stack Developer
+              {t('hero.title')}
             </span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Enthusiastic developer experienced in{' '}
-            <span className="text-purple-400 font-semibold">Flutter</span>,{' '}
-            <span className="text-pink-400 font-semibold">Laravel</span>,{' '}
-            <span className="text-blue-400 font-semibold">Node.js</span>, and{' '}
-            <span className="text-green-400 font-semibold">.NET Core</span>
+            {t('hero.subtitle')}
             <br />
-            Building scalable, mobile-first solutions with payment gateway integration
+            {t('hero.subtitle2')}
           </p>
 
           {/* Enhanced CTA Buttons */}
@@ -105,7 +103,7 @@ export default function Hero() {
               className="group px-8 py-6 text-lg font-semibold bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-2xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-purple-500/25"
             >
               <span className="flex items-center space-x-2">
-                <span>View My Work</span>
+                <span>{t('hero.viewWork')}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Button>
@@ -117,7 +115,7 @@ export default function Hero() {
               className="group px-8 py-6 text-lg font-semibold border-2 border-white/30 text-white bg-white/10 hover:border-purple-400 hover:bg-purple-400/20 rounded-2xl transition-all duration-500 transform hover:scale-110 backdrop-blur-sm"
             >
               <span className="flex items-center space-x-2">
-                <span>Get In Touch</span>
+                <span>{t('hero.getInTouch')}</span>
                 <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </span>
             </Button>
@@ -144,7 +142,7 @@ export default function Hero() {
         {/* Enhanced Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="flex flex-col items-center space-y-2 text-white/60">
-            <span className="text-sm font-medium">Scroll to explore</span>
+            <span className="text-sm font-medium">{t('hero.scrollToExplore')}</span>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
               <div className="w-1 h-3 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full animate-bounce"></div>
             </div>

@@ -1,7 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/lib/hooks/useTranslation';
+import { useLanguage } from '@/lib/contexts/LanguageContext';
 // import { Badge } from '@/components/ui/badge';
 import { 
   Menu, 
@@ -11,22 +13,25 @@ import {
   Code, 
   Briefcase, 
   Mail,
-  Sparkles
+  Sparkles,
+  Languages
 } from 'lucide-react';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { t } = useTranslation();
+  const { language, toggleLanguage } = useLanguage();
 
-  const navItems = [
-    { id: 'home', label: 'Home', icon: Home },
-    { id: 'about', label: 'About', icon: User },
-    { id: 'skills', label: 'Skills', icon: Code },
-    { id: 'experience', label: 'Experience', icon: Briefcase },
-    { id: 'projects', label: 'Projects', icon: Briefcase },
-    { id: 'contact', label: 'Contact', icon: Mail },
-  ];
+  const navItems = useMemo(() => [
+    { id: 'home', label: t('nav.home'), icon: Home },
+    { id: 'about', label: t('nav.about'), icon: User },
+    { id: 'skills', label: t('nav.skills'), icon: Code },
+    { id: 'experience', label: t('nav.experience'), icon: Briefcase },
+    { id: 'projects', label: t('nav.projects'), icon: Briefcase },
+    { id: 'contact', label: t('nav.contact'), icon: Mail },
+  ], [t]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +83,7 @@ export default function Navigation() {
             </div>
             <div className="text-xl font-bold text-white">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Mohammad Abu Arra
+{t('hero.name')}
               </span>
             </div>
           </div>
@@ -111,14 +116,23 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block ml-8">
+          {/* Language Toggle & CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4 ml-8">
+            <Button
+              onClick={toggleLanguage}
+              variant="ghost"
+              className="text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300"
+            >
+              <Languages className="w-5 h-5 mr-2" />
+              <span className="text-sm font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
+            </Button>
+            
             <Button
               onClick={() => scrollToSection('contact')}
               className="group relative px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
               <span className="relative z-10 flex items-center space-x-2">
-                <span className="text-sm font-medium">Let's Talk</span>
+                <span className="text-sm font-medium">{t('nav.letsTalk')}</span>
                 <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </span>
             </Button>
@@ -162,13 +176,22 @@ export default function Navigation() {
               </Button>
             ))}
             
-            <div className="pt-8 border-t border-white/10">
+            <div className="pt-8 border-t border-white/10 space-y-4">
+              <Button
+                onClick={toggleLanguage}
+                variant="ghost"
+                className="w-full text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-all duration-300"
+              >
+                <Languages className="w-5 h-5 mr-3" />
+                <span className="text-base font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
+              </Button>
+              
               <Button
                 onClick={() => scrollToSection('contact')}
                 className="w-full px-8 py-5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 <span className="flex items-center space-x-3">
-                  <span className="text-base font-medium">Let's Talk</span>
+                  <span className="text-base font-medium">{t('nav.letsTalk')}</span>
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </span>
               </Button>

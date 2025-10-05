@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Separator } from '@/components/ui/separator';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 
 const skills = [
   {
@@ -81,6 +82,7 @@ export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedSkills, setAnimatedSkills] = useState<{ [key: string]: number }>({});
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -111,9 +113,15 @@ export default function Skills() {
     return () => observer.disconnect();
   }, []);
 
-  const categories = ['All', 'Languages & Frameworks', 'Databases & APIs', 'Authentication & Services', 'Tools & Services'];
+  const categories = [
+    t('skills.categories.all'), 
+    t('skills.categories.languages'), 
+    t('skills.categories.databases'), 
+    t('skills.categories.auth'), 
+    t('skills.categories.tools')
+  ];
   
-  const filteredSkills = selectedCategory === 'All' 
+  const filteredSkills = selectedCategory === t('skills.categories.all')
     ? skills 
     : skills.filter(skill => skill.category === selectedCategory);
 
@@ -132,15 +140,14 @@ export default function Skills() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
-              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Technical Skills</span>
+              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{t('skills.subtitle')}</span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-              My <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Expertise</span>
+              {t('skills.title')}
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A comprehensive overview of my technical expertise across multiple domains, 
-              from mobile development to cloud infrastructure
+              {t('skills.description')}
             </p>
           </div>
 
@@ -206,8 +213,8 @@ export default function Skills() {
 
           {/* Additional Skills */}
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Additional Expertise</h3>
-            <p className="text-gray-400 text-lg">Tools and technologies I work with</p>
+            <h3 className="text-3xl font-bold text-white mb-4">{t('skills.additional')}</h3>
+            <p className="text-gray-400 text-lg">{t('skills.additionalDesc')}</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8">
@@ -235,17 +242,17 @@ export default function Skills() {
               <CardContent className="flex items-center space-x-8 px-8 py-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400">15+</div>
-                  <div className="text-sm text-gray-400">Technologies</div>
+                  <div className="text-sm text-gray-400">{t('skills.summary.technologies')}</div>
                 </div>
                 <Separator orientation="vertical" className="h-12 bg-white/20" />
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pink-400">4</div>
-                  <div className="text-sm text-gray-400">Categories</div>
+                  <div className="text-sm text-gray-400">{t('skills.summary.categories')}</div>
                 </div>
                 <Separator orientation="vertical" className="h-12 bg-white/20" />
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400">1+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-sm text-gray-400">{t('skills.summary.experience')}</div>
                 </div>
               </CardContent>
             </Card>

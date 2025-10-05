@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { Progress } from '@/components/ui/progress';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 import { 
   Briefcase, 
   Clock, 
@@ -25,6 +26,7 @@ export default function About() {
     satisfaction: 0,
     support: 0
   });
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,13 +65,10 @@ export default function About() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
-              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">About Me</span>
+              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{t('about.title')}</span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-              Crafting Digital
-              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                Excellence
-              </span>
+              {t('about.subtitle')}
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           </div>
@@ -79,18 +78,13 @@ export default function About() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  I'm Mohammad Abu Arra, an enthusiastic full-stack developer experienced in Flutter, Laravel, and Node.js, 
-                  focused on building scalable, mobile-first solutions. I'm skilled in integrating payment gateways and APIs 
-                  to deliver seamless user experiences.
+                  {t('about.description1')}
                 </p>
                 <p className="text-lg text-gray-400 leading-relaxed">
-                  My journey spans across mobile development with Flutter, backend services using Laravel and Express.js, 
-                  and enterprise solutions with .NET Core. I believe in clean code, best practices, and continuous learning.
+                  {t('about.description2')}
                 </p>
                 <p className="text-lg text-gray-400 leading-relaxed">
-                  As a freelancer, I've delivered multiple cross-platform apps with Flutter, backed by Laravel, Firebase, 
-                  and Node.js/Express. I've worked with both relational and NoSQL databases and integrated major payment 
-                  gateways including Moyasar, PayTabs, Paymob, and Mada.
+                  {t('about.description3')}
                 </p>
               </div>
 
@@ -104,7 +98,7 @@ export default function About() {
                       </div>
                       <div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-white">{stats.projects}+</h3>
-                        <p className="text-gray-400 font-medium text-sm sm:text-base">Projects Completed</p>
+                        <p className="text-gray-400 font-medium text-sm sm:text-base">{t('about.stats.projects')}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -118,7 +112,7 @@ export default function About() {
                       </div>
                       <div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-white">{stats.experience}+</h3>
-                        <p className="text-gray-400 font-medium text-sm sm:text-base">Years Experience</p>
+                        <p className="text-gray-400 font-medium text-sm sm:text-base">{t('about.stats.experience')}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -132,7 +126,7 @@ export default function About() {
                       </div>
                       <div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-white">{stats.satisfaction}%</h3>
-                        <p className="text-gray-400 font-medium text-sm sm:text-base">Client Satisfaction</p>
+                        <p className="text-gray-400 font-medium text-sm sm:text-base">{t('about.stats.satisfaction')}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -146,7 +140,7 @@ export default function About() {
                       </div>
                       <div>
                         <h3 className="text-2xl sm:text-3xl font-bold text-white">{stats.support}/7</h3>
-                        <p className="text-gray-400 font-medium text-sm sm:text-base">Available Support</p>
+                        <p className="text-gray-400 font-medium text-sm sm:text-base">{t('about.stats.support')}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -162,7 +156,7 @@ export default function About() {
                     {/* Avatar with shadcn/ui */}
                     <div className="relative">
                       <Avatar className="w-32 h-32 mx-auto border-4 border-purple-400/30 shadow-2xl">
-                        <AvatarImage src="/avatar.jpg" alt="Mohammad Abu Arra" />
+                        <AvatarImage src="/avatar.jpg" alt={t('hero.name')} />
                         <AvatarFallback className="bg-gradient-to-br from-purple-400 to-pink-400 text-white text-2xl font-bold">
                           <User className="w-16 h-16" />
                         </AvatarFallback>
@@ -175,14 +169,14 @@ export default function About() {
                     {/* Profile Info */}
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Mohammad Abu Arra</h3>
+                        <h3 className="text-2xl font-bold text-white mb-2">{t('hero.name')}</h3>
                         <p className="text-gray-300 text-lg">Full-Stack Developer</p>
                       </div>
 
                       {/* Status Badge */}
                       <Badge className="bg-green-500/20 text-green-400 border-green-400/30 px-4 py-2 text-sm">
                         <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                        Available for work
+                        {t('about.status')}
                       </Badge>
 
                       <Separator className="bg-white/10" />
@@ -206,7 +200,7 @@ export default function About() {
                       {/* Experience Progress */}
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Experience Level</span>
+                          <span className="text-sm text-gray-400">{t('about.stats.experience')}</span>
                           <span className="text-sm text-white font-medium">Expert</span>
                         </div>
                         <Progress value={90} className="h-2 bg-slate-700" />
@@ -230,13 +224,12 @@ export default function About() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center space-x-2">
                     <Target className="w-5 h-5 text-purple-400" />
-                    <span>Work Philosophy</span>
+                    <span>{t('about.philosophy')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
-                    I believe in delivering clean, maintainable code that not only meets requirements 
-                    but exceeds expectations. Every project is an opportunity to learn and grow.
+                    {t('about.philosophyText')}
                   </p>
                 </CardContent>
               </Card>
@@ -246,22 +239,22 @@ export default function About() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center space-x-2">
                     <Award className="w-5 h-5 text-blue-400" />
-                    <span>Core Values</span>
+                    <span>{t('about.values.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-gray-300 text-sm">Quality First</span>
+                      <span className="text-gray-300 text-sm">{t('about.values.quality')}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-gray-300 text-sm">Client Satisfaction</span>
+                      <span className="text-gray-300 text-sm">{t('about.values.satisfaction')}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-gray-300 text-sm">Continuous Learning</span>
+                      <span className="text-gray-300 text-sm">{t('about.values.learning')}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -272,17 +265,17 @@ export default function About() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center space-x-2">
                     <Clock className="w-5 h-5 text-green-400" />
-                    <span>Availability</span>
+                    <span>{t('about.availability')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <Badge className="bg-green-500/20 text-green-400 border-green-400/30">
                       <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                      Available Now
+                      {t('about.status')}
                     </Badge>
                     <p className="text-gray-300 text-sm">
-                      Ready to take on new projects and help bring your ideas to life.
+                      {t('about.availabilityText')}
                     </p>
                   </div>
                 </CardContent>

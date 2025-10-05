@@ -2,11 +2,11 @@
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 // import { Card, CardContent } from '@/components/ui/card';
 import { 
   Github, 
   Linkedin, 
-  Twitter, 
   Mail, 
   MapPin, 
   Phone,
@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -47,12 +49,12 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: t('footer.quickLinks.home'), href: '#home' },
+    { name: t('footer.quickLinks.about'), href: '#about' },
+    { name: t('footer.quickLinks.skills'), href: '#skills' },
+    { name: t('footer.quickLinks.experience'), href: '#experience' },
+    { name: t('footer.quickLinks.projects'), href: '#projects' },
+    { name: t('footer.quickLinks.contact'), href: '#contact' }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -69,31 +71,30 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">M</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img src="/avatar.png" alt={t('hero.name')} className="w-full h-full object-cover" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">Mohammad Abu Arra</h3>
+                <h3 className="text-2xl font-bold text-white">{t('hero.name')}</h3>
                 <p className="text-gray-400">Full-Stack Developer</p>
               </div>
             </div>
             
             <p className="text-gray-300 leading-relaxed max-w-md">
-              Enthusiastic full-stack developer experienced in Flutter, Laravel, and Node.js, 
-              focused on building scalable, mobile-first solutions with payment gateway integration.
+              {t('footer.description')}
             </p>
 
             <div className="flex items-center space-x-4">
               <Badge className="bg-green-500/20 text-green-400 border-green-400/30 px-4 py-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                Available for work
+                {t('footer.availableForWork')}
               </Badge>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">{t('footer.quickLinks.title')}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -110,7 +111,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
+            <h4 className="text-lg font-semibold text-white">{t('footer.getInTouch')}</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-purple-400" />
@@ -128,7 +129,7 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h5 className="text-sm font-semibold text-white">Follow Me</h5>
+              <h5 className="text-sm font-semibold text-white">{t('footer.followMe')}</h5>
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <a
@@ -149,9 +150,9 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>© 2024 Mohammad Abu Arra. Made with</span>
+              <span>{t('footer.copyright')}</span>
               <Heart className="w-4 h-4 text-red-400 fill-current" />
-              <span>and modern web technologies.</span>
+              <span>{t('footer.madeWith')}</span>
             </div>
             
             <div className="flex items-center space-x-6">
@@ -162,7 +163,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300"
               >
                 <ArrowUp className="w-4 h-4 mr-2" />
-                Back to Top
+                {t('footer.backToTop')}
               </Button>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useToast } from '@/lib/hooks/use-toast';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +14,7 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,8 +52,8 @@ export default function Contact() {
       
       // Show success toast
       toast({
-        title: "Message Sent Successfully! 🎉",
-        description: "Thank you for your message! I'll get back to you within 24 hours.",
+        title: t('contact.success.title'),
+        description: t('contact.success.description'),
         variant: "default",
       });
       
@@ -59,8 +61,8 @@ export default function Contact() {
     } catch {
       // Show error toast
       toast({
-        title: "Error Sending Message",
-        description: "Something went wrong. Please try again or contact me directly.",
+        title: t('contact.error.title'),
+        description: t('contact.error.description'),
         variant: "destructive",
       });
     } finally {
@@ -122,11 +124,11 @@ export default function Contact() {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Get In <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Touch</span>
+              {t('contact.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
-              Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+              {t('contact.description')}
             </p>
           </div>
 
@@ -134,10 +136,9 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">{t('contact.letsConnect')}</h3>
                 <p className="text-gray-300 mb-8">
-                  I'm always interested in new opportunities and exciting projects. 
-                  Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                  {t('contact.connectDescription')}
                 </p>
               </div>
 
@@ -149,7 +150,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">Email</h4>
+                    <h4 className="text-white font-semibold">{t('contact.contactInfo.email')}</h4>
                     <p className="text-gray-300">mohjamal27703@gmail.com</p>
                   </div>
                 </div>
@@ -162,7 +163,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">Location</h4>
+                    <h4 className="text-white font-semibold">{t('contact.contactInfo.location')}</h4>
                     <p className="text-gray-300">Irbid, Jordan</p>
                   </div>
                 </div>
@@ -174,15 +175,15 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">Response Time</h4>
-                    <p className="text-gray-300">Usually within 24 hours</p>
+                    <h4 className="text-white font-semibold">{t('contact.contactInfo.responseTime')}</h4>
+                    <p className="text-gray-300">{t('contact.contactInfo.responseTimeValue')}</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div>
-                <h4 className="text-white font-semibold mb-4">Follow Me</h4>
+                <h4 className="text-white font-semibold mb-4">{t('contact.followMe')}</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((link) => (
                     <a
@@ -199,12 +200,12 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="bg-slate-800/50 p-10 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{t('contact.sendMessage')}</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Name
+                      {t('contact.form.name')}
                     </label>
                     <input
                       type="text"
@@ -214,12 +215,12 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       className="w-full px-6 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Your Name"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
@@ -229,14 +230,14 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       className="w-full px-6 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject
+                    {t('contact.form.subject')}
                   </label>
                   <input
                     type="text"
@@ -246,13 +247,13 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Project Inquiry"
+                    placeholder={t('contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     id="message"
@@ -262,7 +263,7 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-6 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -271,7 +272,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-8 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.sendMessage')}
                 </button>
               </form>
             </div>

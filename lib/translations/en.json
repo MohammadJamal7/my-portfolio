@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Mohammad",
+    "name": "Mohammad Abu Arra",
+    "title": "Full-Stack Developer",
+    "subtitle": "Enthusiastic developer experienced in Flutter, Laravel, Node.js, and .NET Core",
+    "subtitle2": "Building scalable, mobile-first solutions with payment gateway integration",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Crafting Digital Excellence",
+    "description1": "I'm Mohammad Abu Arra, an enthusiastic full-stack developer experienced in Flutter, Laravel, and Node.js, focused on building scalable, mobile-first solutions. I'm skilled in integrating payment gateways and APIs to deliver seamless user experiences.",
+    "description2": "My journey spans across mobile development with Flutter, backend services using Laravel and Express.js, and enterprise solutions with .NET Core. I believe in clean code, best practices, and continuous learning.",
+    "description3": "As a freelancer, I've delivered multiple cross-platform apps with Flutter, backed by Laravel, Firebase, and Node.js/Express. I've worked with both relational and NoSQL databases and integrated major payment gateways including Moyasar, PayTabs, Paymob, and Mada.",
+    "stats": {
+      "projects": "Projects Completed",
+      "experience": "Years Experience",
+      "satisfaction": "Client Satisfaction",
+      "support": "Available Support"
+    },
+    "status": "Available for work",
+    "philosophy": "Work Philosophy",
+    "philosophyText": "I believe in delivering clean, maintainable code that not only meets requirements but exceeds expectations. Every project is an opportunity to learn and grow.",
+    "values": {
+      "title": "Core Values",
+      "quality": "Quality First",
+      "satisfaction": "Client Satisfaction", 
+      "learning": "Continuous Learning"
+    },
+    "availability": "Availability",
+    "availabilityText": "Ready to take on new projects and help bring your ideas to life."
+  },
+  "skills": {
+    "title": "My Expertise",
+    "subtitle": "Technical Skills",
+    "description": "A comprehensive overview of my technical expertise across multiple domains, from mobile development to cloud infrastructure",
+    "categories": {
+      "all": "All",
+      "languages": "Languages & Frameworks",
+      "databases": "Databases & APIs",
+      "auth": "Authentication & Services",
+      "tools": "Tools & Services"
+    },
+    "additional": "Additional Expertise",
+    "additionalDesc": "Tools and technologies I work with",
+    "summary": {
+      "technologies": "Technologies",
+      "categories": "Categories",
+      "experience": "Years Experience"
+    }
+  },
+  "experience": {
+    "title": "My Journey",
+    "subtitle": "Experience & Education",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "freelance": {
+      "title": "Freelance Web & Mobile Developer",
+      "company": "Remote",
+      "period": "March 2025 – Present",
+      "description": "Delivered multiple cross-platform apps with Flutter, backed by Laravel, Firebase, and Node.js/Express.",
+      "achievements": [
+        "Worked with relational and NoSQL databases (MySQL, PostgreSQL, SQL Server, SQLite, MongoDB, Firestore)",
+        "Built secure authentication, real-time data sync, and responsive UIs",
+        "Integrated major payment gateways (Moyasar, PayTabs, Paymob, Mada) and AdMob for monetization",
+        "Designed and developed a comprehensive car delivery app in Saudi Arabia",
+        "Developed a full education platform using Mux with DRM-protected video streaming",
+        "Contributed to a large-scale Saudi web platform with Express.js",
+        "Enhanced a Laravel-based e-commerce platform with dynamic shipping (Aramex API)",
+        "Published multiple apps on Play Store and App Store"
+      ],
+      "technologies": "Technologies Used",
+      "keyAchievements": "Key Achievements"
+    },
+    "internship": {
+      "title": "Full Stack .NET Intern",
+      "company": "Orange Coding School",
+      "location": "Irbid, Jordan",
+      "period": "August 2024 – November 2024",
+      "description": "Built responsive front-end interfaces and back-end logic using HTML, CSS, JavaScript, C#, and .NET Core.",
+      "achievements": [
+        "Collaborated on UI/UX design using Miro and Figma",
+        "Gained practical experience in SQL, MVC design patterns, and ASP.NET Identity",
+        "Worked on full-stack development projects",
+        "Learned enterprise-level development practices"
+      ]
+    },
+    "education": {
+      "degree": "Bachelor's degree in Software Engineering",
+      "institution": "Zarqa University",
+      "location": "Zarqa, Jordan",
+      "period": "March 2022 – February 2025",
+      "gpa": "GPA: 89% | Excellent",
+      "achievements": [
+        "Academic Excellence: 2nd in college twice",
+        "Strong foundation in software engineering principles",
+        "Practical experience with modern development technologies"
+      ]
+    },
+    "certifications": [
+      {
+        "title": "Flutter Development: Apps with Firebase & AdMob",
+        "issuer": "Professional Certification",
+        "period": "Recent",
+        "description": "Comprehensive Flutter development with Firebase integration and AdMob monetization"
+      },
+      {
+        "title": "Full Stack (Laravel, .NET): Orange Coding School",
+        "issuer": "Orange Coding School",
+        "period": "2024",
+        "description": "Full-stack development certification covering Laravel and .NET technologies"
+      },
+      {
+        "title": "Professional Emails",
+        "issuer": "Coursera",
+        "period": "Recent",
+        "description": "Professional communication and email writing skills"
+      }
+    ]
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Portfolio",
+    "description": "A showcase of my recent work across different technologies and platforms, featuring real-world solutions and innovative designs",
+    "categories": {
+      "all": "All",
+      "mobile": "Mobile",
+      "web": "Web",
+      "backend": "Backend",
+      "frontend": "Frontend"
+    },
+    "featured": "Featured",
+    "viewDetails": "View Details",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "technologiesUsed": "Technologies Used",
+    "viewLiveDemo": "View Live Demo",
+    "projects": [
+      {
+        "title": "Car Delivery App (Saudi Arabia)",
+        "description": "Comprehensive car delivery app with mobile and backend features, Google Maps API integration, and Firebase workflows. Features include real-time tracking, payment integration, and admin dashboard.",
+        "technologies": ["Flutter", "Laravel", "Firebase", "Google Maps API", "Payment Gateways"]
+      },
+      {
+        "title": "Education Platform with DRM Video",
+        "description": "Full education platform using Mux with DRM-protected video streaming for secure content delivery. Features include user authentication, course management, and secure video streaming.",
+        "technologies": ["Flutter", "Node.js", "Mux DRM", "Firebase", "MongoDB"]
+      },
+      {
+        "title": "Saudi Web Platform",
+        "description": "Large-scale Saudi web platform with Express.js, integrating SADQ authentication and Moyasar payments. Features include user management, payment processing, and real-time data sync.",
+        "technologies": ["Express.js", "Node.js", "SADQ Auth", "Moyasar", "PostgreSQL"]
+      },
+      {
+        "title": "E-commerce Platform",
+        "description": "Laravel-based e-commerce platform with dynamic shipping (Aramex API) and seamless checkout (PayTabs). Features include inventory management, order tracking, and payment processing.",
+        "technologies": ["Laravel", "PHP", "Aramex API", "PayTabs", "MySQL"]
+      },
+      {
+        "title": "Cross-Platform Mobile Apps",
+        "description": "Multiple published apps on Play Store and App Store with Flutter, featuring AdMob integration, Firebase backend, and responsive UI/UX design.",
+        "technologies": ["Flutter", "Dart", "AdMob SDK", "Firebase", "Google Play"]
+      },
+      {
+        "title": ".NET Core Full Stack",
+        "description": "Full-stack .NET Core application with responsive front-end interfaces and back-end logic, featuring MVC design patterns and ASP.NET Identity authentication.",
+        "technologies": [".NET Core", "C#", "ASP.NET Identity", "SQL Server", "HTML/CSS/JS"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Contact",
+    "description": "Ready to start your next project? Let's discuss how I can help bring your ideas to life.",
+    "letsConnect": "Let's Connect",
+    "connectDescription": "I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "contactInfo": {
+      "email": "Email",
+      "location": "Location",
+      "responseTime": "Response Time",
+      "responseTimeValue": "Usually within 24 hours"
+    },
+    "followMe": "Follow Me",
+    "sendMessage": "Send a Message",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project Inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "sending": "Sending...",
+      "sendMessage": "Send Message"
+    },
+    "success": {
+      "title": "Message Sent Successfully! 🎉",
+      "description": "Thank you for your message! I'll get back to you within 24 hours."
+    },
+    "error": {
+      "title": "Error Sending Message",
+      "description": "Something went wrong. Please try again or contact me directly."
+    }
+  },
+  "footer": {
+    "description": "Enthusiastic full-stack developer experienced in Flutter, Laravel, and Node.js, focused on building scalable, mobile-first solutions with payment gateway integration.",
+    "availableForWork": "Available for work",
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "getInTouch": "Get In Touch",
+    "followMe": "Follow Me",
+    "copyright": "© 2024 Mohammad Abu Arra. Made with",
+    "madeWith": "and modern web technologies.",
+    "backToTop": "Back to Top"
+  }
+}

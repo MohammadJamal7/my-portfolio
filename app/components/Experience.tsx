@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
+// import { Separator } from '@/components/ui/separator';
+import { useTranslation } from '@/lib/hooks/useTranslation';
 import { 
   Briefcase, 
   Calendar, 
@@ -95,6 +96,7 @@ const certifications = [
 
 export default function Experience() {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -129,10 +131,10 @@ export default function Experience() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
-              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Experience & Education</span>
+              <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{t('experience.subtitle')}</span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-white mb-8">
-              My <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Journey</span>
+              {t('experience.title')}
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           </div>
@@ -142,7 +144,7 @@ export default function Experience() {
             <div className="text-center mb-16">
               <h3 className="text-3xl font-bold text-white mb-4 flex items-center justify-center space-x-3">
                 <Briefcase className="w-8 h-8 text-purple-400" />
-                <span>Work Experience</span>
+                <span>{t('experience.workExperience')}</span>
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             </div>
@@ -193,7 +195,7 @@ export default function Experience() {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                         <Award className="w-5 h-5 text-purple-400" />
-                        <span>Key Achievements</span>
+                        <span>{t('experience.freelance.keyAchievements')}</span>
                       </h4>
                       <ul className="space-y-3">
                         {job.achievements.map((achievement, idx) => (
@@ -206,7 +208,7 @@ export default function Experience() {
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-4">Technologies Used</h4>
+                      <h4 className="text-lg font-semibold text-white mb-4">{t('experience.freelance.technologies')}</h4>
                       <div className="flex flex-wrap gap-2">
                         {job.technologies.map((tech) => (
                           <Badge 
@@ -232,7 +234,7 @@ export default function Experience() {
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4 flex items-center justify-center space-x-3">
                   <GraduationCap className="w-8 h-8 text-blue-400" />
-                  <span>Education</span>
+                  <span>{t('experience.education')}</span>
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
               </div>
@@ -276,7 +278,7 @@ export default function Experience() {
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4 flex items-center justify-center space-x-3">
                   <Award className="w-8 h-8 text-yellow-400" />
-                  <span>Certifications</span>
+                  <span>{t('experience.certifications')}</span>
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full"></div>
               </div>
